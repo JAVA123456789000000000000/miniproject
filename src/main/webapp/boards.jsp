@@ -1,22 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
 <head>
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../css/custom.css">
-	<title>글내용보기</title>
-	<script type="text/javascript" src="script.js"></script>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
-
+    <meta charset="UTF-8">
+    <title>게시물 목록</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px; 
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
-
-
-</body>
+	<h1>게시물목록</h1>
+	  
+    <form id="searchForm" action="boards" method="post" >
+    	<input type="hidden" id="action" name="action" value="list">
+    	<label>제목</label>
+    	<input type="text" id="searchKey" name="searchKey" value="${param.searchKey}">
+    	<input type="submit" value="검색">
+    </form>
+    
+    <form id="listForm" action="boards" method="post">
+    	<input type="hidden" id="action" name="action" value="view">
+    	<input type="hidden" id="bno" name="bno" >
+    </form>
+   
+    <table border="1">
+        <tr>
+            <th>게시물번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+        </tr>
+       
+    </table>
+    </body>
 </html>
