@@ -11,8 +11,7 @@ public class Users {
 	private String userid;
 	private String userpassword;
 	private String username;
-	private int    userage;
+	private String gender;
 	private String useremail;
+	private String phone;
 }
-
-
