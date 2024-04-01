@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,7 @@
 				<h3>로그인</h3>
 			</div>
 			<div>
-				<form action="../member/login.do" method="post">
+				<form action="users.do?action" method="post">
 					<p>
 						<label>ID</label>
 						<span class="w3-right w3-button w3-hover-white" title="아이디 찾기" id="find_id_btn">
@@ -36,6 +38,8 @@
 			</div>
 		</div>
 	</div>
+</body>
+</html>
 
 </body>
 </html>
