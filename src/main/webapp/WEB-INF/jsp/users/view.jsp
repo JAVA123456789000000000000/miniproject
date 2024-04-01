@@ -22,11 +22,11 @@
         회원상세보기
     </h1>
    
-      <label>아이디 : ${user.userid}</label> <br/>
-      <label>이름 : ${user.name}</label><br/>
-      <label>성별: ${user.gender}</label><br/>
-      <label>이메일: ${user.email}</label><br/>
-      <label>전화번호: ${user.phone}</label><br/>
+      <label>아이디 : ${users.userid}</label> <br/>
+      <label>이름 : ${users.name}</label><br/>
+      <label>성별: ${users.gender}</label><br/>
+      <label>이메일: ${users.email}</label><br/>
+      <label>전화번호: ${users.phone}</label><br/>
  <script type="text/javascript" src="<c:url value='/resource/js/common.js'/>"></script>
 <script>
 function jsDelete() {
@@ -52,7 +52,7 @@ function jsUpdateForm() {
 <!-- 두개의 폼을 하나로 합치는 방법 , js를 사용하여 처리  -->
 	<form id="viewForm" method="post" action="users.do">
 		<input type="hidden" id="action" name="action" value="">
-		<input type="hidden" name="userid" value="${user.userid}">
+		<input type="hidden" name="userid" value="${users.userid}">
 		<input type="button" value="삭제" onclick="jsDelete()">
 		<input type="button" value="수정" onclick="jsUpdateForm()">
 	</form>     

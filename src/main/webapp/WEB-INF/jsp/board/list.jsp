@@ -78,7 +78,7 @@ function jsView(bno) {
         <a href="board.do?action=insertForm">등록</a>
     </div>
     <div class="button-container">
-      <a href="users.do?action=">회원목록</a>
+      <a href="users.do?action=list">회원목록</a>
     </div>
     
 </body>
